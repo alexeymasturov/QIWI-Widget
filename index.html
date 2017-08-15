@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QIWI-Widget</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+    <body>
+        <div class="background_widget">
+            <div id="title" class="foundation">Фонд Константина Хабенского</div>
+            <div class="help">Поможем детям вместе!</div>
+            <img src="QIWI_logo_RGB.svg" class="QIWI_logo_RGB">
+            <div class="flex-container">
+                <button class="button" onclick="window.open('https://oplata.qiwi.com/create?public_key=5nAq6abtyCz4tcDj89e5w7Y5i524LAFmzrsN6bQTQ3ceEvMvCq55ToeErzhxNemD6rMzCtzRx9jhV5kUUUyG2BC9sqbKjkRVuFjWXicbby5XJjUAnKNcNDdfEZ', '_blank')">
+                    Пожертвовать
+                </button>
+                <div class="flex-block">
+                    <img src="visa-gray-icon.svg" class="visa-gray-icon">
+                    <img src="mir-gray-icon.svg" class="mir-gray-icon">
+                    <img src="mc-gray-icon.svg" class="mc-gray-icon">
+                    <img src="qiwi-gray-icon.svg" class="qiwi-gray-icon">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var url_string = "https://oplata.qiwi.com/form/?public_key=5nAq6abtyCz4tcDj89e5w7Y5i524LAFmzrsN6bQTQ3ceEvMvCq55ToeErzhxNemD6rMzCtzRx9jhV5kUUUyG2BC9sqbKjkRVuFjWXicbby5XJjUAnKNcNDdfEZ&amount=1";
+            var url = new URL(url_string);
+            var public_key = url.searchParams.get("public_key");
+            console.log(public_key);
+        </script>
+    </body>
+</html>
